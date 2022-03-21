@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>条件类型 | juggle</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="前端知识库">
+    
+    <link rel="preload" href="/learn/assets/css/0.styles.37fa141e.css" as="style"><link rel="preload" href="/learn/assets/js/app.0c8ac874.js" as="script"><link rel="preload" href="/learn/assets/js/2.e53f18d0.js" as="script"><link rel="preload" href="/learn/assets/js/9.18279aa1.js" as="script"><link rel="prefetch" href="/learn/assets/js/10.6b3e3d04.js"><link rel="prefetch" href="/learn/assets/js/3.c6ecc470.js"><link rel="prefetch" href="/learn/assets/js/4.1b609518.js"><link rel="prefetch" href="/learn/assets/js/5.9e2f4ca7.js"><link rel="prefetch" href="/learn/assets/js/6.c7b54f12.js"><link rel="prefetch" href="/learn/assets/js/7.a206d07e.js"><link rel="prefetch" href="/learn/assets/js/8.52f5c2e9.js">
+    <link rel="stylesheet" href="/learn/assets/css/0.styles.37fa141e.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/learn/" class="home-link router-link-active"><!----> <span class="site-name">juggle</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/learn/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  源码
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  实践
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/learn/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow down"></span></button> <button type="button" aria-label="Vue" class="mobile-dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  源码
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  实践
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/learn/" class="sidebar-heading clickable router-link-active"><span>欢迎学习</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn/" aria-current="page" class="sidebar-link">学前必读</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/learn/handbook/computed" class="sidebar-heading clickable open"><span>vue</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/learn/handbook/computed.html" class="sidebar-link">computed计算属性</a></li><li><a href="/learn/handbook/scheduller.html" aria-current="page" class="active sidebar-link">scheduller调度器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/learn/handbook/scheduller.html#scheduler调度器" class="sidebar-link">scheduler调度器</a></li></ul></li><li><a href="/learn/handbook/响应式原理.html" class="sidebar-link">响应式原理</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="scheduler调度器"><a href="#scheduler调度器" class="header-anchor">#</a> scheduler调度器</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">interface</span> <span class="token class-name">ReactiveEffectOptions</span> <span class="token punctuation">{</span>
+  lazy<span class="token operator">?</span><span class="token operator">:</span> boolean <span class="token comment">// 该effect是否</span>
+  scheduler<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">job</span><span class="token operator">:</span> ReactiveEffect</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span> <span class="token comment">// 调度</span>
+  onTrack<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">event</span><span class="token operator">:</span> DebuggerEvent</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span>
+  onTrigger<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">event</span><span class="token operator">:</span> DebuggerEvent</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span>
+  onStop<span class="token operator">?</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span>
+  allowRecurse<span class="token operator">?</span><span class="token operator">:</span> boolean
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">trigger</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">target</span><span class="token operator">:</span> object<span class="token punctuation">,</span>
+  <span class="token literal-property property">type</span><span class="token operator">:</span> TriggerOpTypes<span class="token punctuation">,</span>
+  key<span class="token operator">?</span><span class="token operator">:</span> unknown<span class="token punctuation">,</span>
+  newValue<span class="token operator">?</span><span class="token operator">:</span> unknown<span class="token punctuation">,</span>
+  oldValue<span class="token operator">?</span><span class="token operator">:</span> unknown<span class="token punctuation">,</span>
+  oldTarget<span class="token operator">?</span><span class="token operator">:</span> Map<span class="token operator">&lt;</span>unknown<span class="token punctuation">,</span> unknown<span class="token operator">&gt;</span> <span class="token operator">|</span> Set<span class="token operator">&lt;</span>unknown<span class="token operator">&gt;</span></span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  
+  <span class="token comment">// 省略...</span>
+  
+  <span class="token keyword">const</span> <span class="token function-variable function">run</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">effect</span><span class="token operator">:</span> ReactiveEffect</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+    <span class="token comment">// 有scheduler 调用 scheduler</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>effect<span class="token punctuation">.</span>options<span class="token punctuation">.</span>scheduler<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      effect<span class="token punctuation">.</span>options<span class="token punctuation">.</span><span class="token function">scheduler</span><span class="token punctuation">(</span>effect<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 否则直接执行 effect</span>
+      <span class="token function">effect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  effects<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>run<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>那么在给组件实例套上effect的时候，传给effect的第二个参数是什么呢？</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// runtie-core/src/renderer.ts</span>
+
+<span class="token keyword">const</span> prodEffectOptions <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">scheduler</span><span class="token operator">:</span> queueJob<span class="token punctuation">,</span>
+  <span class="token comment">// #1801, #2043 component render effects should allow recursive updates</span>
+  <span class="token literal-property property">allowRecurse</span><span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">createDevEffectOptions</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">instance</span><span class="token operator">:</span> ComponentInternalInstance</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> ReactiveEffectOptions <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">scheduler</span><span class="token operator">:</span> queueJob<span class="token punctuation">,</span>
+    <span class="token literal-property property">allowRecurse</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">onTrack</span><span class="token operator">:</span> instance<span class="token punctuation">.</span>rtc <span class="token operator">?</span> <span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token function">invokeArrayFns</span><span class="token punctuation">(</span>instance<span class="token punctuation">.</span>rtc<span class="token operator">!</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token keyword">void</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">onTrigger</span><span class="token operator">:</span> instance<span class="token punctuation">.</span>rtg <span class="token operator">?</span> <span class="token parameter">e</span> <span class="token operator">=&gt;</span> <span class="token function">invokeArrayFns</span><span class="token punctuation">(</span>instance<span class="token punctuation">.</span>rtg<span class="token operator">!</span><span class="token punctuation">,</span> e<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token keyword">void</span> <span class="token number">0</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>queueJob的作用就是将effect放入queue任务队列。</p> <p>总结一下组件更新的调度流程</p> <p>1.组件实例创建时，套上了effect方法</p> <p>2.修改响应式数据，触发effect重新执行（先调用trigger函数）</p> <p>3.effect的第二个参数中有scheduler属性，所以不会直接执行effect方法，而是将调用scheduler方法即queueJob</p> <p>4.将组件更新effect放入queue队列中</p> <h3 id="清空队列主要流程"><a href="#清空队列主要流程" class="header-anchor">#</a> 清空队列主要流程</h3> <p>异步执行flushJob，这里使用了resolvedPromise.then(flushJobs)。将清空队列的操作变成了异步。
+清空preFlushCb队列
+清空queue队列
+清空postFlushCbs队列</p> <p>这里的“清空”是执行队列中所有任务的意思</p> <p>以下面的demo为例，解释一下从修改响应式数据到nextTick中回调执行的过程</p> <div class="language-js extra-class"><pre class="language-js"><code>name<span class="token punctuation">.</span>value <span class="token operator">+=</span> <span class="token string">' yes!'</span>
+<span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>dom<span class="token operator">?.</span>innerHTML<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 输出：name: pipi yes!</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><p>1.当执行name.value += 'yes!'时，响应式数据发生了改变<br></p> <ul><li>触发Proxy的sette，将更新组件任务的effect放入vue任务队列中(调用queueJob)<br></li> <li>调用queueFlush,这里调用了promise.resolve,所以将flushJob放入微任务队列<br></li> <li>此时微任务队列=[flushJobs]<br>
+2.接着执行nextTick。等待currentFlushPromise执行完毕。<br>
+3.开始清空微任务队列。先执行flushJobs，执行更新组件任务的effect，这个过程会操作DOM,一旦操作DOM。浏览器会进行线程切换。由js线程切换到渲染线程，浏览器去更新DOM。当DOM更新完毕，切回js线程。回到js线程后，currentFlushPromise状态变为fullfilled.将nextTick的回调cb放入微任务队列。此时微任务队列=[cb]<br>
+4.继续清空微任务队列，执行cb.此时如果在cb中访问dom,就是渲染完成后的dom<br></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/learn/handbook/computed.html" class="prev">
+        computed计算属性
+      </a></span> <span class="next"><a href="/learn/handbook/响应式原理.html">
+        响应式原理
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/learn/assets/js/app.0c8ac874.js" defer></script><script src="/learn/assets/js/2.e53f18d0.js" defer></script><script src="/learn/assets/js/9.18279aa1.js" defer></script>
+  </body>
+</html>
